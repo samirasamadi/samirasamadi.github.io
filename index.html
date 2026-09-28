@@ -105,10 +105,26 @@
   .links-row a:hover{ color:var(--accent-ink); }
   .links-row svg{ width:15px; height:15px; flex:none; }
   .links-row .email-text{ font-family:"IBM Plex Mono", ui-monospace, monospace; font-size:13px; }
+  .role-list{
+    list-style:none;
+    margin:0;
+    padding:0;
+    display:flex;
+    flex-direction:column;
+    gap:4px;
+  }
   .role{
     font-size:14.5px;
     color:var(--muted);
     margin:0;
+    display:flex;
+    align-items:baseline;
+    gap:8px;
+  }
+  .role::before{
+    content:"•";
+    color:var(--accent);
+    font-size:11px;
   }
   .role a{ color:var(--muted); }
   .thesis{
@@ -290,7 +306,7 @@
   .affil-text a{ color:var(--muted-2); }
 
   footer{
-    margin-top:56px;
+    margin-top:28px;
     padding-top:20px;
     border-top:1px solid var(--border);
     font-size:12px;
@@ -327,8 +343,16 @@
             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M2 4h20v16H2V4zm2 2v.01L12 12l8-5.99V6H4zm16 2.24-7.4 5.55a1 1 0 0 1-1.2 0L4 8.24V18h16V8.24z"/></svg>
             <span class="email-text">samira.samadi@tuebingen.mpg.de</span>
           </a>
+          <a href="https://x.com/highBirdInPink" aria-label="Twitter">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            Twitter
+          </a>
         </div>
-        <p class="role">Research Group Leader · <a href="https://is.mpg.de/hml">Max Planck Institute for Intelligent Systems</a></p>
+        <ul class="role-list">
+          <li class="role">Research Group Leader · <a href="https://is.mpg.de/hml">Max Planck Institute for Intelligent Systems</a></li>
+          <li class="role">Faculty · <a href="https://learning-systems.org/">Max Planck ETH Center for Learning Systems (CLS)</a></li>
+          <li class="role">Member · <a href="https://uni-tuebingen.de/en/research/core-research/cluster-of-excellence-machine-learning/home/">Cluster of Excellence</a>, University of Tübingen</li>
+        </ul>
       </div>
     </div>
     <p class="thesis">I work on whether the tests we use to evaluate machine learning systems, foundation models especially, actually measure what we say they measure.</p>
@@ -409,9 +433,7 @@
 
   <hr class="divider">
 
-  <p class="affil-text">I'm also faculty at the <a href="https://learning-systems.org/">Max Planck ETH Center for Learning Systems</a> and a member of the <a href="https://uni-tuebingen.de/en/research/core-research/cluster-of-excellence-machine-learning/home/">Cluster of Excellence</a> at the University of Tübingen.</p>
-
-  <hr class="divider">
+  <p class="affil-text">I also <a href="paintings.html">paint</a>.</p>
 
   <footer>samirasamadi.org</footer>
 
