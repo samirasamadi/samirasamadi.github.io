@@ -318,6 +318,20 @@
     margin:28px 0 0;
   }
   .affil-text a{ color:var(--muted-2); }
+  .paint-line{
+    --paint-ochre:#d39b2a; --paint-red:#c2533a;
+    font-family:"Newsreader", Georgia, serif;
+    font-style:italic;
+    font-size:30px;
+    line-height:1.3;
+    color:var(--ink);
+    margin:30px 0 0;
+  }
+  @media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .paint-line{ --paint-ochre:#e9bf63; --paint-red:#e8826b; } }
+  :root[data-theme="dark"] .paint-line{ --paint-ochre:#e9bf63; --paint-red:#e8826b; }
+  .paint-line a{ position:relative; color:var(--ink); text-decoration:none; padding:0 6px; z-index:0; }
+  .paint-line a svg{ position:absolute; left:-8px; top:52%; width:calc(100% + 16px); height:0.95em; transform:translateY(-50%) rotate(-2deg); z-index:-1; overflow:visible; }
+  .paint-line a:hover svg path:first-of-type{ opacity:0.6; }
 
   footer{
     margin-top:28px;
@@ -489,7 +503,7 @@
 
   <hr class="divider">
 
-  <p class="affil-text">I also <a href="paintings.html">paint</a>.</p>
+  <p class="paint-line">I also <a href="paintings.html">paint<svg viewBox="0 0 200 40" preserveAspectRatio="none" aria-hidden="true"><defs><filter id="wc"><feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="3" seed="4"/><feDisplacementMap in="SourceGraphic" scale="9"/></filter></defs><path d="M6 22 C40 8, 90 10, 120 14 S180 12, 196 20 C180 34, 120 32, 80 33 S20 36, 6 22Z" fill="var(--paint-ochre)" opacity="0.45" filter="url(#wc)"/><path d="M14 24 C60 16, 120 18, 190 22" stroke="var(--paint-red)" stroke-width="5" fill="none" opacity="0.28" stroke-linecap="round" filter="url(#wc)"/></svg></a>.</p>
 
   <footer>samirasamadi.org</footer>
 
